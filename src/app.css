@@ -1,0 +1,14 @@
+#app {
+    height: 100vh;
+    background-color: #f4f5ff;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none !important;
+    color: black !important;
+}
+
+.active a {
+    color: white !important;
+}
