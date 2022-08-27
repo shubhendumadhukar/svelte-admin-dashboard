@@ -39,7 +39,7 @@
         </button>
     </div>
 </nav>
-<div id="sliding-menu" uk-offcanvas="overlay: true">
+<div id="sliding-menu" class="uk-hidden@l" uk-offcanvas="overlay: true">
     <div class="uk-offcanvas-bar uk-background-muted">
         <SideNav />
     </div>
