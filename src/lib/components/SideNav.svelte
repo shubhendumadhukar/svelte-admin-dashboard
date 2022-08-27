@@ -5,6 +5,7 @@
     import BsWallet from "svelte-icons-pack/bs/BsWallet";
     import BsPersonCircle from "svelte-icons-pack/bs/BsPersonCircle";
     import BsPencilSquare from "svelte-icons-pack/bs/BsPencilSquare";
+    import VscFeedback from "svelte-icons-pack/vsc/VscFeedback";
     import SideMenuItem from "./SideMenuItem.svelte";
     let homeMenuItems = [
         {
@@ -26,6 +27,12 @@
             title: "MY CLASSES",
             active: false,
             destination: "/classes",
+        },
+        {
+            icon: VscFeedback,
+            title: "MY REVIEWS",
+            active: false,
+            destination: "/classes/reviews",
         },
         {
             icon: BsPencilSquare,
@@ -77,27 +84,15 @@
 <div class="uk-card uk-card-default uk-card-body sidenav">
     <div class="uk-flex uk-flex-column uk-flex-between uk-height-1-1">
         <div>
-            <p
-                class="uk-text-muted uk-text-bolder uk-text-uppercase uk-text-meta"
-            >
-                HOME
-            </p>
+            <p class="uk-text-bolder uk-text-uppercase">HOME</p>
             {#each homeMenuItems as item (item.icon)}
                 <SideMenuItem {...item} onClick={sideMenuItemOnClick} />
             {/each}
-            <p
-                class="uk-text-muted uk-text-bolder uk-text-uppercase uk-text-meta"
-            >
-                CLASSROOM
-            </p>
+            <p class="uk-text-bolder uk-text-uppercase">CLASSROOM</p>
             {#each classMenuItems as item (item.icon)}
                 <SideMenuItem {...item} onClick={sideMenuItemOnClick} />
             {/each}
-            <p
-                class="uk-text-muted uk-text-bolder uk-text-uppercase uk-text-meta"
-            >
-                PROFILE
-            </p>
+            <p class="uk-text-bolder uk-text-uppercase">PROFILE</p>
             {#each profileMenuItems as item (item.icon)}
                 <SideMenuItem {...item} onClick={sideMenuItemOnClick} />
             {/each}
@@ -118,5 +113,12 @@
     }
     .sidenav {
         height: 95%;
+    }
+    .uk-text-bolder {
+        font-size: small;
+    }
+    .uk-card {
+        box-shadow: none;
+        background-color: transparent;
     }
 </style>

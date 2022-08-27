@@ -4,6 +4,7 @@
     import FiMail from "svelte-icons-pack/fi/FiMail";
     import FiUser from "svelte-icons-pack/fi/FiUser";
     import FaSolidHamburger from "svelte-icons-pack/fa/FaSolidHamburger";
+    import SideNav from "./SideNav.svelte";
 </script>
 
 <nav class="uk-padding-small uk-border-rounded" uk-navbar>
@@ -39,43 +40,8 @@
     </div>
 </nav>
 <div id="sliding-menu" uk-offcanvas="overlay: true">
-    <div class="uk-offcanvas-bar">
-        <ul class="uk-nav uk-nav-default">
-            <li class="uk-active"><a href="/">Active</a></li>
-            <li class="uk-parent">
-                <a href="/">Parent</a>
-                <ul class="uk-nav-sub">
-                    <li><a href="/">Sub item</a></li>
-                    <li><a href="/">Sub item</a></li>
-                </ul>
-            </li>
-            <li class="uk-nav-header">Header</li>
-            <li>
-                <a href="/"
-                    ><span
-                        class="uk-margin-small-right"
-                        uk-icon="icon: table"
-                    /> Item</a
-                >
-            </li>
-            <li>
-                <a href="/"
-                    ><span
-                        class="uk-margin-small-right"
-                        uk-icon="icon: thumbnails"
-                    /> Item</a
-                >
-            </li>
-            <li class="uk-nav-divider" />
-            <li>
-                <a href="/"
-                    ><span
-                        class="uk-margin-small-right"
-                        uk-icon="icon: trash"
-                    /> Item</a
-                >
-            </li>
-        </ul>
+    <div class="uk-offcanvas-bar uk-background-muted">
+        <SideNav />
     </div>
 </div>
 
@@ -88,5 +54,8 @@
     }
     #sliding-menu {
         color: black;
+    }
+    .uk-offcanvas-bar {
+        padding: 1em;
     }
 </style>
