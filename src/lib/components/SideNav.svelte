@@ -6,7 +6,7 @@
     import BsPersonCircle from "svelte-icons-pack/bs/BsPersonCircle";
     import BsPencilSquare from "svelte-icons-pack/bs/BsPencilSquare";
     import VscFeedback from "svelte-icons-pack/vsc/VscFeedback";
-    import SideMenuItem from "./SideMenuItem.svelte";
+    import SideMenuItem from "$components/SideMenuItem.svelte";
     let homeMenuItems = [
         {
             icon: BsGrid1x2Fill,

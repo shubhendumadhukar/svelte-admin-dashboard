@@ -4,7 +4,7 @@
     import FiMail from "svelte-icons-pack/fi/FiMail";
     import FiUser from "svelte-icons-pack/fi/FiUser";
     import FaSolidHamburger from "svelte-icons-pack/fa/FaSolidHamburger";
-    import SideNav from "./SideNav.svelte";
+    import SideNav from "$components/SideNav.svelte";
 </script>
 
 <nav class="uk-padding-small uk-border-rounded" uk-navbar>

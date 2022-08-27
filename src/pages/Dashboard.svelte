@@ -1,10 +1,11 @@
 <script>
-    import DashboardWidget from "../lib/components/DashboardWidget.svelte";
+    import DashboardWidget from "$components/DashboardWidget.svelte";
     import FaSolidCoins from "svelte-icons-pack/fa/FaSolidCoins";
     import FaSolidFlagCheckered from "svelte-icons-pack/fa/FaSolidFlagCheckered";
     import BsCalendar2HeartFill from "svelte-icons-pack/bs/BsCalendar2HeartFill";
     import SiGoogleclassroom from "svelte-icons-pack/si/SiGoogleclassroom";
-    import Timeline from "../lib/components/Timeline.svelte";
+    import Timeline from "$components/Timeline.svelte";
+    import Classes from "$components/Classes.svelte";
 
     const dashboardWidgets = [
         {
@@ -57,6 +58,18 @@
             date: "2022-08-21",
             labelClass: "danger",
         },
+        {
+            title: "Wallet Recharge: $200",
+            label: "RECHARGE",
+            date: "2022-08-21",
+            labelClass: "success",
+        },
+        {
+            title: "Classroom: Quantum Physics",
+            label: "WITHDRAW",
+            date: "2022-08-21",
+            labelClass: "danger",
+        },
     ];
 </script>
 
@@ -75,8 +88,11 @@
             <DashboardWidget {...widget} />
         {/each}
     </div>
-    <div class="uk-margin-remove-top" uk-grid>
-        <div class="uk-width-expand">
+    <div class="uk-margin-remove-top uk-grid-match" uk-grid>
+        <div class="uk-width-expand@l">
+            <Classes />
+        </div>
+        <div class="uk-width-1-2@l">
             <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
                 <h3 class="uk-card-title">Recent Activities</h3>
                 <hr />
@@ -84,11 +100,6 @@
                 {#each timelineItems as item}
                     <Timeline {...item} />
                 {/each}
-            </div>
-        </div>
-        <div class="uk-width-1-3">
-            <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
-                1-3
             </div>
         </div>
     </div>

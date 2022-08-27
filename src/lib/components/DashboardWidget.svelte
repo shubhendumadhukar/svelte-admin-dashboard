@@ -1,5 +1,4 @@
 <script>
-    import BsPencilSquare from "svelte-icons-pack/bs/BsPencilSquare";
     import Icon from "svelte-icons-pack/Icon.svelte";
     export let icon;
     export let title;
