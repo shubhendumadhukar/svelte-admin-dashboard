@@ -7,6 +7,21 @@
     import Timeline from "$components/Timeline.svelte";
     import Heatmap from "$components/Heatmap.svelte";
     import MemberCard from "$components/MemberCard.svelte";
+    import { getRandomQuote } from "$utils/quotes";
+    import { onMount } from "svelte";
+    let quote = {
+        text: "",
+        author: "",
+    };
+    onMount(() => {
+        getQuote();
+        setInterval(() => {
+            getQuote();
+        }, 30000);
+    });
+    const getQuote = () => {
+        quote = getRandomQuote();
+    };
 
     const dashboardWidgets = [
         {
@@ -65,7 +80,15 @@
 <!-- Banner -->
 <div id="dashboard" class="uk-card uk-card-default uk-card-body">
     <p class="uk-text-lead">Hello Shubhendu!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    <!-- <p>{quote}</p> -->
+    <blockquote cite="#" style="color: white">
+        <p class="uk-margin-small-bottom">
+            {quote.text}
+        </p>
+        <footer style="color: white">
+            {quote.author}
+        </footer>
+    </blockquote>
 </div>
 <!-- Widgets -->
 <div class="uk-container uk-container-xlarge">

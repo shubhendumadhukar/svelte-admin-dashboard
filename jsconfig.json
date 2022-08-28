@@ -27,7 +27,13 @@
     "checkJs": true,
     "paths": {
       "$components/*": [
-        "src/lib/components/*"
+        "src/lib/components/*",
+      ],
+      "$utils/*": [
+        "src/utils/*"
+      ],
+      "$assets/*": [
+        "src/assets/*"
       ]
     }
   },
