@@ -5,7 +5,8 @@
     import BsCalendar2HeartFill from "svelte-icons-pack/bs/BsCalendar2HeartFill";
     import SiGoogleclassroom from "svelte-icons-pack/si/SiGoogleclassroom";
     import Timeline from "$components/Timeline.svelte";
-    import Classes from "$components/Classes.svelte";
+    import Heatmap from "$components/Heatmap.svelte";
+    import MemberCard from "$components/MemberCard.svelte";
 
     const dashboardWidgets = [
         {
@@ -58,18 +59,6 @@
             date: "2022-08-21",
             labelClass: "danger",
         },
-        {
-            title: "Wallet Recharge: $200",
-            label: "RECHARGE",
-            date: "2022-08-21",
-            labelClass: "success",
-        },
-        {
-            title: "Classroom: Quantum Physics",
-            label: "WITHDRAW",
-            date: "2022-08-21",
-            labelClass: "danger",
-        },
     ];
 </script>
 
@@ -88,11 +77,9 @@
             <DashboardWidget {...widget} />
         {/each}
     </div>
-    <div class="uk-margin-remove-top uk-grid-match" uk-grid>
-        <div class="uk-width-expand@l">
-            <Classes />
-        </div>
-        <div class="uk-width-1-2@l">
+    <Heatmap />
+    <div class="uk-margin-remove-top uk-margin-bottom uk-grid-match" uk-grid>
+        <div class="uk-width-expand">
             <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
                 <h3 class="uk-card-title">Recent Activities</h3>
                 <hr />
@@ -101,6 +88,9 @@
                     <Timeline {...item} />
                 {/each}
             </div>
+        </div>
+        <div class="uk-width-1-3">
+            <MemberCard />
         </div>
     </div>
 </div>
