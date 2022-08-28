@@ -3,6 +3,7 @@
     import FiFacebook from "svelte-icons-pack/fi/FiFacebook";
     import RiLogoLinkedinBoxLine from "svelte-icons-pack/ri/RiLogoLinkedinBoxLine";
     import FiInstagram from "svelte-icons-pack/fi/FiInstagram";
+    import { Link } from "svelte-routing";
 </script>
 
 <div class="uk-card uk-card-default uk-border-rounded">
@@ -43,10 +44,13 @@
         </div>
     </div>
     <div class="uk-card-body">
-        <button
-            class="uk-button uk-button-secondary uk-buttom-small uk-width-1-1"
-            >My Profile</button
-        >
+        <Link to="/profile">
+            <button
+                class="uk-button uk-button-secondary uk-buttom-small uk-width-1-1"
+            >
+                My Profile
+            </button>
+        </Link>
     </div>
 </div>
 

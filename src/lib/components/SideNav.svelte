@@ -56,11 +56,9 @@
         },
     ];
     const sideMenuItemOnClick = (e) => {
-        if (e.target.innerText) {
-            homeMenuItems = reMapItems(homeMenuItems, e);
-            classMenuItems = reMapItems(classMenuItems, e);
-            profileMenuItems = reMapItems(profileMenuItems, e);
-        }
+        homeMenuItems = reMapItems(homeMenuItems, e);
+        classMenuItems = reMapItems(classMenuItems, e);
+        profileMenuItems = reMapItems(profileMenuItems, e);
     };
     const reMapItems = (items, e) => {
         items = items.map((item) => {

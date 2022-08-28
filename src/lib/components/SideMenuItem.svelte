@@ -17,14 +17,14 @@
         <Icon size="1.25em" src={icon} />
     </div>
     <div>
-        <button
-            class="uk-button uk-button-default uk-button-small uk-text-left"
-            on:click={onClick}
-        >
-            <Link to={destination}>
-                <span class="uk-text-bolder">{title}</span></Link
+        <Link to={destination}>
+            <button
+                class="uk-button uk-button-default uk-button-small uk-text-left"
+                on:click={onClick}
             >
-        </button>
+                <span class="uk-text-bolder">{title}</span>
+            </button>
+        </Link>
     </div>
 </div>
 
@@ -47,7 +47,6 @@
     button {
         border: none;
         line-height: 2rem;
-        cursor: default;
     }
     .side-menu-item {
         border-radius: 10px;
