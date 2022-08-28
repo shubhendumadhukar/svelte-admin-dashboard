@@ -4,6 +4,9 @@
     import RiLogoLinkedinBoxLine from "svelte-icons-pack/ri/RiLogoLinkedinBoxLine";
     import FiInstagram from "svelte-icons-pack/fi/FiInstagram";
     import { Link } from "svelte-routing";
+    import BsStarFill from "svelte-icons-pack/bs/BsStarFill";
+    import BsStarHalf from "svelte-icons-pack/bs/BsStarHalf";
+    import BsStar from "svelte-icons-pack/bs/BsStar";
 </script>
 
 <div class="uk-card uk-card-default uk-border-rounded">
@@ -17,7 +20,16 @@
                 Member Since 2022-01-22
             </p>
             <p class="uk-text-small uk-text-captialize">@shubhendu-madhukar</p>
-            <div class="uk-text-center uk-margin-large-top">
+            <p class="uk-text-small uk-text-captialize">Level: Novice - I</p>
+            <p class="uk-text-small uk-text-captialize">
+                Ratings:
+                <Icon src={BsStarFill} color="white" />
+                <Icon src={BsStarFill} color="white" />
+                <Icon src={BsStarFill} color="white" />
+                <Icon src={BsStarHalf} color="white" />
+                <Icon src={BsStar} color="white" />
+            </p>
+            <div class="uk-text-center uk-margin-top">
                 <!-- svelte-ignore a11y-missing-content -->
                 <a
                     href="/"
@@ -66,7 +78,7 @@
         padding: 1.5em;
     }
     .member-card {
-        background: rgba(255, 255, 255, 0.4);
+        background: rgba(255, 255, 255, 0.2);
         border: 2px solid white;
         color: white;
     }
