@@ -24,9 +24,9 @@
         },
         {
             icon: BsCalendar3,
-            title: "MY CLASSES",
+            title: "MY CALENDAR",
             active: false,
-            destination: "/classes",
+            destination: "/calendar",
         },
         {
             icon: VscFeedback,

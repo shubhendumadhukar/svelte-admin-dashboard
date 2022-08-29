@@ -7,7 +7,7 @@
   import { Router, Route } from "svelte-routing";
   import BrowseClasses from "./pages/BrowseClasses.svelte";
   import Dashboard from "./pages/Dashboard.svelte";
-  import MyClasses from "./pages/MyClasses.svelte";
+  import MyCalendar from "./pages/MyCalendar.svelte";
   import MyProfile from "./pages/MyProfile.svelte";
   import Notes from "./pages/Notes.svelte";
   import Wallet from "./pages/Wallet.svelte";
@@ -41,7 +41,7 @@
         <div>
           <Route path="classes/browse" component={BrowseClasses} />
           <Route path="classes/notes" component={Notes} />
-          <Route path="classes" component={MyClasses} />
+          <Route path="calendar" component={MyCalendar} />
           <Route path="profile/wallet" component={Wallet} />
           <Route path="profile" component={MyProfile} />
           <Route path="/"><Dashboard /></Route>
