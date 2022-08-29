@@ -2,7 +2,7 @@
     import DashboardWidget from "$components/DashboardWidget.svelte";
     import FaSolidCoins from "svelte-icons-pack/fa/FaSolidCoins";
     import FaSolidFlagCheckered from "svelte-icons-pack/fa/FaSolidFlagCheckered";
-    import BsCalendar2HeartFill from "svelte-icons-pack/bs/BsCalendar2HeartFill";
+    import AiFillFire from "svelte-icons-pack/ai/AiFillFire";
     import SiGoogleclassroom from "svelte-icons-pack/si/SiGoogleclassroom";
     import Timeline from "$components/Timeline.svelte";
     import Heatmap from "$components/Heatmap.svelte";
@@ -34,7 +34,7 @@
             icon: SiGoogleclassroom,
             title: "Upcoming Classes",
             number: 2,
-            color: "#493657",
+            color: "#F45B69",
         },
         {
             icon: FaSolidCoins,
@@ -43,10 +43,10 @@
             color: "#F7B32B",
         },
         {
-            icon: BsCalendar2HeartFill,
+            icon: AiFillFire,
             title: "Streak (days)",
             number: 20,
-            color: "#F2B5D4",
+            color: "#F13030",
         },
     ];
     const timelineItems = [

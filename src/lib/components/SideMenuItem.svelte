@@ -20,6 +20,7 @@
         <Link to={destination}>
             <button
                 class="uk-button uk-button-default uk-button-small uk-text-left"
+                style="color: {active ? 'white' : 'black'} !important"
                 on:click={onClick}
             >
                 <span class="uk-text-bolder">{title}</span>
