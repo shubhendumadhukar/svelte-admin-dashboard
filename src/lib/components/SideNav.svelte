@@ -7,6 +7,7 @@
     import BsPencilSquare from "svelte-icons-pack/bs/BsPencilSquare";
     import VscFeedback from "svelte-icons-pack/vsc/VscFeedback";
     import SideMenuItem from "$components/SideMenuItem.svelte";
+    import { onMount } from "svelte";
     let homeMenuItems = [
         {
             icon: BsGrid1x2Fill,
@@ -73,6 +74,34 @@
         });
         return items;
     };
+    onMount(() => {
+        let destination = window.location.pathname;
+        console.log(destination);
+        homeMenuItems = homeMenuItems.map((item) => {
+            if (item.destination === destination) {
+                item.active = true;
+            } else {
+                item.active = false;
+            }
+            return item;
+        });
+        classMenuItems = classMenuItems.map((item) => {
+            if (item.destination === destination) {
+                item.active = true;
+            } else {
+                item.active = false;
+            }
+            return item;
+        });
+        profileMenuItems = profileMenuItems.map((item) => {
+            if (item.destination === destination) {
+                item.active = true;
+            } else {
+                item.active = false;
+            }
+            return item;
+        });
+    });
 </script>
 
 <div class="uk-text-center">
