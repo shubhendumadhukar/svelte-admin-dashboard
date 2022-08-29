@@ -2,13 +2,16 @@
     import FullCalendar from "svelte-fullcalendar";
     import daygridPlugin from "@fullcalendar/daygrid";
     import timeGridPlugin from "@fullcalendar/timegrid";
+    import listPlugin from "@fullcalendar/list";
     let month = (new Date().getMonth() + 1).toString();
     if (parseInt(month) < 10) {
         month = "0" + month;
     }
     let options = {
         initialView: "dayGridMonth",
-        headerToolbar: { center: "dayGridMonth,timeGridWeek" },
+        headerToolbar: {
+            center: "timeGridDay,timeGridWeek,dayGridMonth,listMonth",
+        },
         views: {
             dayGrid: {
                 // options apply to dayGridMonth, dayGridWeek, and dayGridDay views
@@ -22,8 +25,9 @@
             day: {
                 // options apply to dayGridDay and timeGridDay views
             },
+            listWeek: {},
         },
-        plugins: [daygridPlugin, timeGridPlugin],
+        plugins: [daygridPlugin, timeGridPlugin, listPlugin],
         height: "80vh",
         events: [
             {
