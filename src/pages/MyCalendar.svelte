@@ -76,7 +76,7 @@
 </script>
 
 <div
-    class="uk-card uk-card-default uk-card-body uk-padding uk-margin-top uk-border-rounded"
+    class="uk-card uk-card-default uk-card-body uk-padding uk-margin-top uk-margin-bottom uk-border-rounded"
 >
     <FullCalendar {options} />
 </div>

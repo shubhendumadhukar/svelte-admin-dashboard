@@ -13,6 +13,7 @@
   import Wallet from "./pages/Wallet.svelte";
   import Icon from "svelte-icons-pack/Icon.svelte";
   import BsPhoneLandscape from "svelte-icons-pack/bs/BsPhoneLandscape";
+  import MyReviews from "./pages/MyReviews.svelte";
   export let url = "";
   let innerWidth;
   let innerHeight;
@@ -41,6 +42,7 @@
         <div>
           <Route path="classes/browse" component={BrowseClasses} />
           <Route path="classes/notes" component={Notes} />
+          <Route path="classes/reviews" component={MyReviews} />
           <Route path="calendar" component={MyCalendar} />
           <Route path="profile/wallet" component={Wallet} />
           <Route path="profile" component={MyProfile} />
